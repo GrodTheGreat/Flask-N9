@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Flask App
+{% endblock title %}
+
+{% block body %}
+<h1>Hello, World!</h1>
+<p>{{ my_value }}</p>
+<p>{{ my_calc }}</p>
+<ul>
+    {% for item in my_list %}
+    <li {% if item == 30 %}style="color: red;"{% endif %}>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{{ url_for('other') }}">Other</a>
+{% endblock body %}
